@@ -31,3 +31,9 @@ gcc lex.yy.c -o <filename>
 ```
 ./<filename>
 ```
+
+### Code runner config
+```
+".l":"cd $dir && lex $fileName && gcc lex.yy.c -o $fileNameWithoutExt && $dir$fileNameWithoutExt"
+
+```
