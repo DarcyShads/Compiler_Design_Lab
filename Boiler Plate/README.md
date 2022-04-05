@@ -34,4 +34,10 @@ objdump -h <filename>.o
 ```
 <br>
 
+### Print snippet
+```
+printf("");
+```
+<br>
+
 ###
