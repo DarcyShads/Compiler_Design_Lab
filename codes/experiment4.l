@@ -1,11 +1,14 @@
 %{
     #include<stdio.h>
-    int c=0;
+    int count=0;
 %}
 
 %%
-[0-9].*[a-zA-Z] {printf("valid");++c;}
-.* printf("invalid");
+ab.*ba {
+			printf("valid");
+			count++;
+			}
+.* {printf("invalid");}
 %%
 
 int yywrap(void) {}
@@ -13,6 +16,6 @@ int yywrap(void) {}
 int main()
 {
     yylex();
-    printf("no. of such strings = %d\n",c);
+	 printf("No. of such strings = %d\n",count);
     return 0;
 }

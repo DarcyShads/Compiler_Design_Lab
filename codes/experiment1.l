@@ -1,10 +1,12 @@
 %{
     #include<stdio.h>
+    int n=0,t=0,s=0;
 %}
 
 %%
-^[a-zA-z_][a-zA-Z0-9_]* {printf("valid");};
-.* {printf("invalid");}
+"\n" {n++;}
+" " {s++;}
+"\t" {t++;}
 %%
 
 int yywrap(void) {}
@@ -12,5 +14,8 @@ int yywrap(void) {}
 int main()
 {
     yylex();
+    printf("New Line = %d",n);
+    printf("Space = %d",s);
+    printf("Tab = %d",t);
     return 0;
 }
