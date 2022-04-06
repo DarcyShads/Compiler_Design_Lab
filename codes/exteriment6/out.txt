@@ -1,0 +1,4 @@
+New Line = 4
+Space = 2
+Tab = 2
+Others = 10
